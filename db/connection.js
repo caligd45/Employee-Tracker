@@ -3,7 +3,7 @@ const fs = require("fs");
 var mysql = require("mysql");
 const util = require("util");
 
-const config = require('./package.json');
+
 
 var connection = mysql.createConnection({
     host: "localhost",

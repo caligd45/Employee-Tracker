@@ -1,6 +1,10 @@
 const { prompt } = require ("inquirer")
 const db = require ("./db")
 require ("console.table")
+var mysql = require("mysql");
+const util = require("util");
+
+const config = require('./package.json');
 
 async function mainPrompts(){
     const { choice } = await prompt ([
@@ -113,7 +117,6 @@ async function addEmployee() {
     console.log("added employee to database!")
     mainPrompts()
 }
-//add department and add roles will go here
 async function addDepartment() {
     const department = await prompt([{
         name: "name",
@@ -123,9 +126,15 @@ async function addDepartment() {
     console.log("Added department to database!")
     mainPrompts()
 }
-// async function addRoles() {
-//     const 
-// }
+async function addRole() {
+    const role = await prompt([{
+        name: "name",
+        message: "What is the role?"
+    }])
+    await db.createRole(role)
+    console.log("Added role to database!")
+    mainPrompts()
+}
 
 function quit(){
     console.log("Quitting application")
