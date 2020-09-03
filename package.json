@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/caligd45/Employee-Tracker"
+    "url": "git+https://github.com/caligd45/Employee-Tracker.git"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +20,9 @@
   "homepage": "https://github.com/caligd45/Employee-Tracker#readme",
   "dependencies": {
     "console.table": "^0.10.0",
+    "express": "^4.17.1",
     "inquirer": "^7.3.3",
     "mysql": "^2.18.1"
-  }
+  },
+  "devDependencies": {}
 }

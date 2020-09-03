@@ -1,5 +1,5 @@
-const inquirer = require("inquirer");
-const fs = require("fs");
+// const inquirer = require("inquirer");
+// const fs = require("fs");
 var mysql = require("mysql");
 const util = require("util");
 
